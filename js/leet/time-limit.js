@@ -4,10 +4,10 @@ const timeLimit = function (fn, t) {
             setTimeout(() => reject("Time Limit Exceeded"), t)
             try {
                 const result = await fn(...args);
-                ll('result:', result);
+                console.log('result:', result);
                 resolve(result);
             } catch (error) {
-                ll('reject:', error);
+                console.log('reject:', error);
                 reject(error);
             }
         });

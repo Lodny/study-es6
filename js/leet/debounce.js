@@ -1,15 +1,9 @@
 const debounce = function(fn, t) {
-    let timerId = -1;
+    let timerId;
 
     return function(...args) {
-        if (timerId >= 0) {
-            clearTimeout(timerId);
-            timerId = -1;
-        }
-
-        timerId = setTimeout(() => {
-            fn(...args);
-        }, t)
+        clearTimeout(timerId);
+        timerId = setTimeout(_ => fn(...args), t);
     }
 };
 

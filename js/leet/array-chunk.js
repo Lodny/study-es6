@@ -1,19 +1,7 @@
 const chunk = (arr, size) => {
-    // return arr.reduce((newArr, curr, idx) => {
-    //     const currChunk = newArr[Math.floor(idx / size)];
-    //     if (currChunk)
-    //         currChunk.push(curr);
-    //     else
-    //         newArr.push([curr]);
-    //
-    //     return newArr;
-    // }, []);
-
     const chunkedArray = [];
-
-    for (let i = 0; i < arr.length; i += size) {
+    for (let i = 0; i < arr.length; i += size)
         chunkedArray.push(arr.slice(i, i + size));
-    }
 
     return chunkedArray;
 }
