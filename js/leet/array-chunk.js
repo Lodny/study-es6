@@ -1,5 +1,3 @@
-import {ll} from './common.js'
-
 const chunk = (arr, size) => {
     // return arr.reduce((newArr, curr, idx) => {
     //     const currChunk = newArr[Math.floor(idx / size)];
@@ -20,7 +18,7 @@ const chunk = (arr, size) => {
     return chunkedArray;
 }
 
-ll(chunk([1, 2, 3, 4, 5, 6, 7], 1));
-ll(chunk([1, 2, 3, 4, 5, 6, 7], 2));
-ll(chunk([1, 2, 3, 4, 5, 6, 7], 3));
-ll(chunk([1, 2, 3, 4, 5, 6, 7], 4));
+console.log(chunk([1, 2, 3, 4, 5, 6, 7], 1));
+console.log(chunk([1, 2, 3, 4, 5, 6, 7], 2));
+console.log(chunk([1, 2, 3, 4, 5, 6, 7], 3));
+console.log(chunk([1, 2, 3, 4, 5, 6, 7], 4));

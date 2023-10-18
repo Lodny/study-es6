@@ -47,7 +47,7 @@ const keyup = e => {
 }
 
 const keyup2 = e => {
-    console.log('keyup2:');
+    console.log('keyup2:', e);
 }
 document.addEventListener('keyup', keyup);
 document.addEventListener('keyup', keyup2);

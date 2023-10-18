@@ -1,5 +1,3 @@
-import {ll} from './common.js'
-
 class TimeLimitedCache {
     constructor() {
         this.map = new Map();
@@ -32,6 +30,6 @@ class TimeLimitedCache {
 
 
 const timeLimitedCache = new TimeLimitedCache()
-ll(timeLimitedCache.set(1, 42, 1000)); // false
-ll(timeLimitedCache.get(1)); // 42
-ll(timeLimitedCache.count()); // 1
+console.log(timeLimitedCache.set(1, 42, 1000)); // false
+console.log(timeLimitedCache.get(1)); // 42
+console.log(timeLimitedCache.count()); // 1

@@ -1,5 +1,3 @@
-import {ll} from './common.js'
-
 class Button {
     constructor(name) {
         this.name = name;

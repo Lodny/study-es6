@@ -1,5 +1,3 @@
-import {ll} from './common.js'
-
 const start = performance.now();
 
 const promiseAll = function (functions) {
@@ -26,5 +24,5 @@ const promise = promiseAll([
     // () => new Promise((resolve, reject) => setTimeout(() => reject("Error"), 100))
 ]);
 promise
-    .then(ret => ll('resolve:', ret, performance.now() - start))
-    .catch(err => ll('reject:', err, performance.now() - start))
+    .then(ret => console.log('resolve:', ret, performance.now() - start))
+    .catch(err => console.log('reject:', err, performance.now() - start))
