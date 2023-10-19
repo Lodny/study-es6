@@ -6,6 +6,8 @@ const MIN = 0;
 const MAX = cells.length - 1;
 
 const checkCurrentRow = () => {
+  // return document.querySelector('#shortcuts li.current');
+
   let current;
   cells.forEach((item, index) => { if(item.classList.contains('current')) current = index; })
   return current;
@@ -13,7 +15,7 @@ const checkCurrentRow = () => {
 
 const checkNextRow = (currentRow, alt, operation) => {
   let next;
-  if(operation === '+') next = currentRow + alt > MAX ? MAX : currentRow + alt; 
+  if(operation === '+') next = currentRow + alt > MAX ? MAX : currentRow + alt;
   else next = currentRow - alt < MIN ? MIN : currentRow - alt;
   return next;
 }
@@ -40,9 +42,9 @@ const keyup = e => {
 
   if(SHIFT) cells[currentRow].classList.add('selected');
   else cells.forEach(item => item.classList.remove('selected'));
-  
+
   if(SHIFT && ALT === 5) colorRow(currentRow, nextRow);
-    
+
   cells[currentRow].classList.remove('current');
   cells[nextRow].classList.add('current');
 }
