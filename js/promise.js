@@ -1,52 +1,41 @@
-import {ll} from './common.js'
-
 async function func1() {
-    ll('func1 start...')
-    const ret = await new Promise(res => {
-        setTimeout(() => res(1), 3000);
-    });
-    ll('func1 end...')
-
+    console.log('func1 start...')
+    const ret = await new Promise(res => setTimeout(() => res(1), 3000));
+    console.log('func1 end...')
     return ret;
 }
 
 async function func2() {
-    ll('func2 start...')
-    const ret = await new Promise(res => {
-        setTimeout(() => res(2), 2000);
-    });
-    ll('func2 end...')
-
+    console.log('func2 start...')
+    const ret = await new Promise(res => setTimeout(() => res(2), 2000));
+    console.log('func2 end...')
     return ret;
 }
 
 async function func3() {
-    ll('func3 start...')
-    const ret = await new Promise(res => {
-        setTimeout(() => res(3), 1000);
-    });
-    ll('func3 end...')
-
+    console.log('func3 start...')
+    const ret = await new Promise(res => setTimeout(() => res(3), 1000));
+    console.log('func3 end...')
     return ret;
 }
 
 const start = performance.now();
-ll('start...');
+console.log('start...');
 
 (async () => {
-    ll('in main...');
+    console.log('in main...');
     const ret = await func1();
     const ret2 = await func2();
-    ll('end main...', ret, ret2, performance.now() - start);
+    console.log('end main...', ret, ret2, performance.now() - start);
 })();
 
-ll('continue...');
+console.log('continue...');
 
 (async () => {
-    ll('in sub...');
+    console.log('in sub...');
     const ret3 = await func3();
-    ll(ret3);
-    ll('end sub...', ret3, performance.now() - start);
+    console.log(ret3);
+    console.log('end sub...', ret3, performance.now() - start);
 })();
 
-ll('end..................................................', performance.now() - start);
+console.log('end..................................................', performance.now() - start);
