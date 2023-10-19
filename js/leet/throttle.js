@@ -1,12 +1,27 @@
-const throttle = (fn, t) => {
-    let timerId = 0;
+const throttle = (fn, delay) => {
+    let wait = false;
+    let savedArgs = undefined;
+
+    const timeoutFunc = _ => {
+        if (savedArgs === undefined) {
+            wait = false;
+        } else {
+            fn(...savedArgs);
+            savedArgs = undefined;
+            setTimeout(timeoutFunc, delay);
+        }
+    }
 
     return (...args) => {
-        if (timerId)
+        if (wait) {
+            savedArgs = args;
             return;
+        }
 
         fn(...args);
-        timerId = setTimeout(_ => timerId = 0, t);
+        wait = true;
+
+        setTimeout(timeoutFunc, delay);
     }
 }
 
