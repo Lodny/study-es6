@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Custom Right Click Context Menu | CodingNepal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Iconscout Link For Icons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <link rel="stylesheet" href="css/flexitime-popup-tag.css">
+    <script src="js/flexitime-popup-tag.js" defer></script>
+
+    <style>
+        html {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        table {
+            width: 1000px;
+            text-align: center;
+        }
+
+        tr {
+            width: 100%;
+            height: 30px;
+            background-color: #f8f8f8;
+        }
+
+        tr td.date {
+            width: 100px;
+            background-color: #eee;
+        }
+
+        tr td.category {
+            width: 200px;
+            background-color: #ddd;
+        }
+
+    </style>
+</head>
+<body>
+
+<table>
+    <tr>
+        <td class="date">10-01</td>
+        <td class="category">1</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td class="date">10-01</td>
+        <td class="category">2</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td class="date">10-01</td>
+        <td class="category">3</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td class="date">10-01</td>
+        <td class="category">4</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td class="date">10-01</td>
+        <td class="category">5</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td class="date">10-01</td>
+        <td class="category">6</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td class="date">10-01</td>
+        <td class="category">7</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td class="date">10-01</td>
+        <td class="category">8</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td class="date">10-01</td>
+        <td class="category">9</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td class="date">10-01</td>
+        <td class="category">9</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td class="date">10-01</td>
+        <td class="category">9</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td class="date">10-01</td>
+        <td class="category">9</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td class="date">10-01</td>
+        <td class="category">9</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td class="date">10-01</td>
+        <td class="category">9</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td class="date">10-01</td>
+        <td class="category">9</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td class="date">10-01</td>
+        <td class="category">9</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td class="date">10-01</td>
+        <td class="category">9</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td class="date">10-01</td>
+        <td class="category">9</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td class="date">10-01</td>
+        <td class="category">9</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+
+<flexitime-popup-tag>
+    <flexitime-menu-tag></flexitime-menu-tag>
+</flexitime-popup-tag>
+
+<script>
+    const cb = e => {
+        console.log('e:', e);
+    }
+
+    document.querySelectorAll('.category').forEach(category => {
+        category.addEventListener('click', e => {
+            const x = e.clientX + 10;
+            const y = e.clientY;
+            const flexitimePopup = document.querySelector('flexitime-popup-tag');
+            flexitimePopup.show(x, y, cb);
+        })
+    })
+</script>
+
+</body>
+</html>

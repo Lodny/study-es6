@@ -1,0 +1,77 @@
+flexitime-popup-tag {
+    position: fixed;
+    visibility: hidden;
+    z-index: 1001;
+
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /*background-color: red;*/
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+flexitime-menu-tag {
+    position: absolute;
+    width: 200px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+flexitime-menu-tag .menu {
+    padding: 2px 12px 2px 8px;
+}
+
+flexitime-menu-tag .content .item {
+    list-style: none;
+    font-size: 15px;
+    height: 30px;
+    display: flex;
+    width: 100%;
+    cursor: pointer;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 2px;
+    padding: 0 5px 0 10px;
+}
+
+flexitime-menu-tag .content .item:hover {
+    background: #f2f2f2;
+}
+
+flexitime-menu-tag .content .item span {
+    margin-left: 8px;
+    font-size: 15px;
+}
+
+flexitime-menu-tag .content .share {
+    position: relative;
+    justify-content: space-between;
+}
+
+flexitime-menu-tag .share .share-menu {
+    position: absolute;
+    background: #fff;
+    width: 130px;
+    left: 185px;
+    padding: 13px;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+    transition: 0.1s ease;
+}
+
+flexitime-menu-tag .share:hover .share-menu {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+flexitime-menu-tag .separator {
+    list-style: none;
+    margin-top: 12px;
+    height: 1px;
+    padding-bottom: 12px;
+    border-top: 1px solid #ccc;
+}

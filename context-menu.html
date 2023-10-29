@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Custom Right Click Context Menu | CodingNepal</title>
+    <link rel="stylesheet" href="css/context-menu.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Iconscout Link For Icons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <style>
+        html {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        table {
+            width: 1000px;
+            text-align: center;
+        }
+
+        tr {
+            width: 100%;
+            height: 30px;
+            background-color: #f8f8f8;
+        }
+
+        tr td.date {
+            width: 100px;
+            background-color: #eee;
+        }
+
+        tr td.category {
+            width: 200px;
+            background-color: #ddd;
+        }
+
+    </style>
+</head>
+<body>
+
+<table>
+    <tr>
+        <td class="date">10-01</td>
+        <td class="category">1</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td class="date">10-01</td>
+        <td class="category">2</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td class="date">10-01</td>
+        <td class="category">3</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td class="date">10-01</td>
+        <td class="category">4</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td class="date">10-01</td>
+        <td class="category">5</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td class="date">10-01</td>
+        <td class="category">6</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td class="date">10-01</td>
+        <td class="category">7</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td class="date">10-01</td>
+        <td class="category">8</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td class="date">10-01</td>
+        <td class="category">9</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td class="date">10-01</td>
+        <td class="category">9</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td class="date">10-01</td>
+        <td class="category">9</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td class="date">10-01</td>
+        <td class="category">9</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td class="date">10-01</td>
+        <td class="category">9</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td class="date">10-01</td>
+        <td class="category">9</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td class="date">10-01</td>
+        <td class="category">9</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td class="date">10-01</td>
+        <td class="category">9</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td class="date">10-01</td>
+        <td class="category">9</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td class="date">10-01</td>
+        <td class="category">9</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td class="date">10-01</td>
+        <td class="category">9</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+
+
+<div class="full_popup">
+    <div class="wrapper">
+        <div class="content">
+            <ul class="menu">
+                <li class="item share">
+                    <div>
+                        <i class="uil uil-eye"></i>
+                        <span>일근태(휴가)</span>
+                    </div>
+                    <i class="uil uil-angle-right"></i>
+                    <ul class="share-menu">
+                        <li class="item">
+                            <i class="uil uil-twitter-alt"></i>
+                            <span>Twitter</span>
+                        </li>
+                        <li class="item">
+                            <i class="uil uil-instagram"></i>
+                            <span>Instagram</span>
+                        </li>
+                        <li class="item">
+                            <i class="uil uil-dribbble"></i>
+                            <span>Dribble</span>
+                        </li>
+                        <li class="item">
+                            <i class="uil uil-telegram-alt"></i>
+                            <span>Telegram</span>
+                        </li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <i class="uil uil-share"></i>
+                    <span>시간근태(휴가)</span>
+                </li>
+                <li class="item">
+                    <i class="uil uil-link-alt"></i>
+                    <span>일근태</span>
+                </li>
+                <li class="item">
+                    <i class="uil uil-edit"></i>
+                    <span>시간근태</span>
+                </li>
+                <li class="item share">
+                    <div>
+                        <i class="uil uil-setting"></i>
+                        <span>추가/공제</span>
+                    </div>
+                    <i class="uil uil-angle-right"></i>
+                    <ul class="share-menu">
+                        <li class="item">
+                            <i class="uil uil-twitter-alt"></i>
+                            <span>Twitter</span>
+                        </li>
+                        <li class="item">
+                            <i class="uil uil-instagram"></i>
+                            <span>Instagram</span>
+                        </li>
+                        <li class="item">
+                            <i class="uil uil-dribbble"></i>
+                            <span>Dribble</span>
+                        </li>
+                        <li class="item">
+                            <i class="uil uil-telegram-alt"></i>
+                            <span>Telegram</span>
+                        </li>
+                        <li class="item">
+                            <i class="uil uil-telegram-alt"></i>
+                            <span>Telegram2</span>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="setting">
+                <li class="item">
+                    <i class="uil uil-trash-alt"></i>
+                    <span>삭제</span>
+                </li>
+                <li class="item">
+                    <i class="uil uil-trash-alt"></i>
+                    <span>삭제</span>
+                </li>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/context-menu.js"></script>
+</body>
+</html>
