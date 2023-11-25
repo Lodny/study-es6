@@ -1,20 +1,16 @@
+import {testRun, repeatCallFnWithCountEveryMillisUntilSeconds} from "../common.js";
+
+
 const debounce = (fn, t) => {
-    let timerId;
-
+    let timer;
     return (...args) => {
-        clearTimeout(timerId);
-        timerId = setTimeout(_ => fn(...args), t);
+        clearTimeout(timer);
+        timer = setTimeout(_ => fn(...args), t);
     }
-};
+}
 
-const run = v => console.log(`running...${v}`);
-const debouncedRun = debounce(run, 1000);
-
-(async _ => {
-    for (let i = 0; i < 30; i++) {
-        await new Promise(resolve => setTimeout(_ => resolve(), 100));
-        // run(i);
-        debouncedRun(i);
-    }
-})();
+let run = testRun;
+run = debounce(run, 500);
+// repeatCallFnWithCountEveryMillisUntilSeconds(run, 100, 3);
+repeatCallFnWithCountEveryMillisUntilSeconds(run, 600, 2);
 
